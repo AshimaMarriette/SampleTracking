@@ -1,0 +1,135 @@
+﻿html {
+    background: url(../../../assets/images/pages_bg.png) repeat top left fixed;
+    /*#99afb9*/
+    /*#b6d0dc*/
+    /*#f7f7f7*/
+    /*#f4f7f6--prev color*/
+
+    /*#bcb39a9e--- login with transparent*/
+    /*#bcb39a-- without transparency*/
+    /*#166672*/
+}
+
+body:before, body:after {
+    height: 2px !important;
+}
+
+.page-loader-wrapper {
+    background-color: #00000050 !important;
+}
+
+#left-sidebar {
+    background-color: #fafafa4a !important;  /*#d3ccbe*/
+    border-right: 1px solid #a8a49b;
+    box-shadow: 5px 1px 17px 3px rgb(4 9 13 / 25%);
+}
+
+    #left-sidebar .nav-tabs .nav-link.active {
+        background-color: transparent;  
+        border-color: #dee2e6 #dee2e6  #dee2e6 !important;  /*#3eacff #3eacff   #f4f7f6*/
+    }
+
+    .sidebar-nav .metismenu ul a::before {
+    content: "\f111";
+    position: absolute;
+    left: 36px;
+    font: normal normal normal 9px/1 FontAwesome;
+    margin-top: 8px;
+}
+
+.nav-tabs {
+    border-bottom: 1px solid #dee2e6 !important;
+}
+
+.navbar-fixed-top {
+    top: 2px !important;
+}
+
+.nav-shadow {
+    border-bottom: 1px solid #3eacff69;
+    box-shadow: 0 3px 6px 0 rgb(4 9 13 / 25%);
+}
+
+.validation-summary-errors {
+    color: #dc3545 !important;
+}
+
+.select2-highlighted .select2-result-label {
+    color: white !important;
+}
+
+.dataTables_filter {
+    display: none;
+}
+
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background-color: transparent !important;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #6c757d75;
+}
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #6c757d75;
+    }
+
+.bg-primary-tranparent {
+    background-color: #007bff75 !important;
+}
+
+.bg-secondary-tranparent {
+    background-color: #6c757d75 !important;
+}
+
+.bg-warning-tranparent {
+    background-color: #ffc10775 !important;
+}
+
+.bg-info-tranparent {
+    background-color: #3C89DA75 !important;
+}
+
+.bg-danger-tranparent {
+    background-color: #dc354575 !important;
+}
+
+.bg-success-tranparent {
+    background-color: #28a74575 !important;
+}
+
+.h-225 {
+    width: 225px;
+}
+
+.w-225 {
+    height: 225px;
+}
+
+.red {
+    color: #dd5a43 !important;
+}
+
+.green {
+    color: #69aa46 !important;
+}
+
+input.parsley-success, select.parsley-success, textarea.parsley-success {
+    color: #4a5057;
+    background-color: #ffffff;
+    border: 1px solid #ced4da;
+}
+.select2-container-disabled {
+    background-color: #f4f4f4 !important;
+}

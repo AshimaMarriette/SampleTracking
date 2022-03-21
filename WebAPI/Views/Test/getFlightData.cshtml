@@ -1,0 +1,82 @@
+﻿@model IEnumerable<WebAPI.Models.FlightDetails>
+
+@if (Model.Any())
+{
+
+    <div class="table-responsive">
+        <table class="table m-b-0 table-hover">
+            <thead class="thead-light">
+                <tr>
+                    <th>Departure </th>
+                    <th></th>
+                    <th>Arrival</th>
+                    <th>Flight</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+
+
+            <tbody>
+
+                @{int i = 1;}
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td class="project-title">
+                            <h6>@item.FromCountry</h6>
+                            <small>Departed:</small>
+                            <h4>@item.ActualFromTime</h4>
+                            <small>@item.FromDate</small><br />
+                            <small>Scheduled Departure :@item.ScheduleFromTime</small>
+                        </td>
+                        <td>
+                            <div class="progress progress-xs">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="1000" aria-valuemax="100" style="width: 100%;"></div>
+                            </div>
+                        </td>
+                        <td class="project-title">
+                            <h6>@item.ToCountry</h6>
+                            <small>Arrived:</small>
+                            <h4>@item.ActualToTime</h4>
+                            <small>@item.ToDate</small><br />
+                            <small>Scheduled Arrival :@item.ArrivalToTime</small>
+                        </td>
+                        <td class="project-actions">
+                            <h6>@item.FlightNumber</h6>
+                        </td>
+                        <td>
+                            @if (item.Status == "ARVD")
+                            {
+                                <span class="badge badge-success">Arrived</span>
+                            }
+                            else if (item.Status == "PDEP")
+                            {
+                                <span class="badge badge-info">Not Yet Arrived</span>
+                            }
+                            else
+                            {
+                                <span class="badge badge-warning">@item.Status</span>
+                            }
+
+                        </td>
+                    </tr>
+                    i++;
+                }
+
+            </tbody>
+        </table>
+    </div>
+}
+
+
+    @section styles{
+        <link rel="stylesheet" href="~/assets/vendor/jquery-datatable/dataTables.bootstrap4.min.css">
+    }
+
+    @section scripts{
+        <script src="~/assets/vendor/fullcalendar/moment.min.js"></script>
+        <script src="~/assets/bundles/datatablescripts.bundle.js"></script>
+        <script src="~/assets/vendor/jquery-datatable/buttons/buttons.bootstrap4.min.js"></script>
+
+    }
+
